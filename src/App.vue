@@ -1,4 +1,21 @@
 <script setup>
+  import { ref } from 'vue'
+
+  const num = ref(100);
+
+  function clickMe() {
+      num.value++
+  }
+
+</script>
+
+<template>
+  <div>
+    {{ num }}
+    <button type="button" v-on:click="clickMe">click</button>
+  </div>
+</template>
+<!-- <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 </script>
@@ -44,4 +61,4 @@ header {
     flex-wrap: wrap;
   }
 }
-</style>
+</style> -->
